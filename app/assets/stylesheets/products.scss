@@ -1,0 +1,28 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+	box-shadow: 10px 10px 5px #888888;
+	background-color: #dcc9ab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+tr {
+	padding: 0.5em;
+    }
+
+th {
+	color: #3234cd;
+	font-family: Helvetica,Arial,Georgia,serif;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	font-size: 1.8em;
+	padding-left: 5em;
+	text-align: center;
+
+}
+
+
