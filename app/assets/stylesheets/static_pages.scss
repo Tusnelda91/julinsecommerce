@@ -15,11 +15,11 @@ body {
 /***navbar***/
 
 .navbar {
-	background-color: #ffffff;
+	background-color: #28c093;
 	height: 5em;
 }
 
-.navbar-nav ul li a {
+.navbar-collapse collapse .navbar-right ul li a {
 	color: #3234cd;
 	background-color: #fff;
 	letter-spacing: 0.05em;
@@ -38,7 +38,7 @@ body {
 }
 
 .projectName a:hover {
-	color: #ff0;
+	color: #1d5fd7;
 }
 
 /***h1***/
@@ -49,11 +49,12 @@ h1 {
 	text-align: center;
 }
 
-img-responsive {
+.img-responsive hoian {
 	display: inline-block;
 	float: center;
 	width: 60%;
 	padding: 2em;
+	border: red;
 }
 
 body > .container {
