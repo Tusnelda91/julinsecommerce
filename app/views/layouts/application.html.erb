@@ -3,7 +3,9 @@
   <head>
     <title>Julinsecommerce</title>
 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 
    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -32,7 +34,8 @@
           </div> <!--end projectName -->          
         </div> <!--end navbar-header -->        
         <div class="navbar-collapse collapse">
-          <ul class="navbar-right nav navbar-nav">
+        
+          <ul class="navbar-right nav navbar-nav" id=mynavbar>
             <li class="active"> <a href="#home"> Home </a> </li> 
             <li class="active"> <a href="#about"> About </a></li> 
             <li class="active"> <a href="#contact">Contact </a></li>
