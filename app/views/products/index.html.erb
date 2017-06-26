@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1>Angebote</h1>
 
 
       <div class="container-fluid" id="products">
-  <div class="row">
+  <div class="row" id="angebote">
     <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
+      <div class="col-sm-2 col-md-3">
       <%= image_tag(product.image_url, class: "img-responsive") %>
        
         <a href="#"><h1> <%= product.name %> </h1></a>

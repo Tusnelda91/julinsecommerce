@@ -2,27 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table {
-	box-shadow: 10px 10px 5px #888888;
-	background-color: #dcc9ab;
+#products {
+	background-color: #28c093;
+	align-items: center;
+}
+
+#products a, h1, p {	
     display: flex;
+    font-family: Acme,Arial,Georgia,serif;
     align-items: center;
     justify-content: center;
+    color: #3234cd;
+   
 }
 
-tr {
+h1 {
 	padding: 0.5em;
+	border-width: 0.5em;
+	box-shadow: 10px 10px 5px #888888;
     }
 
-th {
-	color: #3234cd;
-	font-family: Helvetica,Arial,Georgia,serif;
+#products a h1 {
 	font-weight: bold;
 	letter-spacing: 0.05em;
-	font-size: 1.8em;
-	padding-left: 5em;
+	font-size: 2em;
+	padding: 3em;
 	text-align: center;
-
 }
 
+#products p {
+	font-size: 1.3em;
+	text-align: center;
+}
 
+#products img {
+	align: center;
+	border: 0.5em #3234cd;
+}
