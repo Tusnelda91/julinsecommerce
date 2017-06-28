@@ -41,20 +41,28 @@ body {
 
 /***h1***/
 h1 {
-	font-family: Acme,Arial,Georgia,serif;
 	font-weight: bold;
-	color: #3234cd;
-	text-align: center;
+	color: #28c093;
+	background-color: #3234cd;
 }
 
-img-responsive {
+h2, p, h1 {
+	font-family: Acme,Arial,Georgia,serif;
+	text-align: center;
+	}
+
+h2, p {
+	color: #3234cd;
+	background-color: #28c093;
+}
+
+.img-responsive {
 	display: inline-block;
 	float: center;
-	width: 70%;
+	width: 90%;
 	padding: 2em;
-	border-color: aqua;
-	border-width: 0.05em;
-}
+	border: #3234cd 1em;
+	}
 
 body > .container {
   padding: 60px 15px 0;
