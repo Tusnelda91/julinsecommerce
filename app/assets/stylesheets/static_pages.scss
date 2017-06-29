@@ -16,7 +16,7 @@ body {
 
 .navbar {
 	background-color: #28c093;
-	height: 5em;
+	height: 6em;
 }
 
 #mynavbar a {
@@ -30,14 +30,10 @@ body {
 		color: #ff0;
 	}
 
-.projectName a {
-	color: #3234cd;
-	padding-top: 0.5em;
+.projectName  {
+	padding-top: 0.2em;
 }
 
-.projectName a:hover {
-	color: #1d5fd7;
-}
 
 /***carousel***/
 .carousel-caption {

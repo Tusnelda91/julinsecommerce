@@ -16,11 +16,14 @@
    
 }
 
+.field {
+	height: 2em;
+}
+
 h1 {
 	padding: 0.5em;
 	border-width: 0.5em;
 	box-shadow: 10px 10px 5px #888888;
-	box-height: 2em;
     }
 
 #products a h1 {
@@ -32,7 +35,7 @@ h1 {
 }
 
 #products p {
-	font-size: 1.3em;
+	font-size: 1.4em;
 	text-align: center;
 }
 
