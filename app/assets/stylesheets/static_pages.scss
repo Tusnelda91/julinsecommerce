@@ -39,7 +39,19 @@ body {
 	color: #1d5fd7;
 }
 
-/***h1***/
+/***carousel***/
+.carousel-caption {
+	font-family: Acme,Arial,Georgia,serif;
+	color: #28c093;
+	font-size: 3em;
+	padding: 3em;
+}
+
+.carousel-indicators {
+	color: #28c093;
+}
+
+/***table***/
 h1 {
 	font-weight: bold;
 	color: #28c093;
