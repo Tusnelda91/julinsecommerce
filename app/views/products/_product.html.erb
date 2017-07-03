@@ -1,12 +1,13 @@
 
 
- <% @products.each do |product| %>
       <div class="col-sm-2 col-md-3">
       <%= image_tag(product.image_url, class: "img-responsive") %>
 
-      <%= link_to "Show Product", product_path(3) %>
+       <!--%= link_to "Show Product", product %-->
+      <%= button_to "Show Package", product, :method => "get" %>
+      
 <!-- generates the HTML tag: -->
-<a href=”/products/3>Show Product</a>
+<!--a href=”/products/3>Show Product</a-->
 
         <a href="#"><h1> <%= product.name %> </h1></a>
         
@@ -15,6 +16,7 @@
         <p> <%= product.more_about %> </p>
         <p>€ <%= product.price %></p>
         
+        
        
       </div><!-- /col -->
-    <% end %>
+    

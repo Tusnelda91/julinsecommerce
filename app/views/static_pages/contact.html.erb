@@ -3,3 +3,30 @@
    <li>by email: julin@contact.info</li>
    <li>or phone: +49 551 912799</li>
   </h2>
+
+
+<h1>Or fill in our form</h1>
+
+<div class="container contact-form">
+<%= flash[:notice] %>
+
+<%= form_with(url: "/static_pages/thank_you") do |form| %>
+  <div class="row" style="width: 90%">
+    <div class="col-md-12">
+    <div class="form-group">
+
+
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Please enter your Name", :required => true %>
+      </div>      
+      <div class="form-group">
+        <%= email_field_tag :email, nil, class: "form-control", placeholder: "Please enter your Email", :required => true %>
+      </div>
+      <div class="form-group">
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Please enter your Message", :required => true %>
+      </div>      
+  <%= submit_tag "Send", class: "btn btn-primary send-button" %>   
+  <% end %>
+</div><!-- end container -->
+
+
+       

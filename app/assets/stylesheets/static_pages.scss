@@ -34,6 +34,10 @@ body {
 	padding-top: 0.2em;
 }
 
+.btn-default {
+	color: #28c093; 
+	background-color: #3234cd;
+}
 
 /***carousel***/
 .carousel-caption {
@@ -43,9 +47,11 @@ body {
 	padding: 3em;
 }
 
-.carousel-indicators {
-	color: #28c093;
+.carousel-indicators .active {
+	background-color: #28c093;
 }
+
+.carousel-indicators li { border-color: #3234cd; } 
 
 /***table***/
 h1 {
@@ -75,6 +81,7 @@ h2, p {
 body > .container {
   padding: 60px 15px 0;
 }
+
 
 /***footer***/
 footer {
