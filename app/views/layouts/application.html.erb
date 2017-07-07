@@ -20,10 +20,31 @@
 
   <body>
   
+<<<<<<< HEAD
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
+=======
+  <!--flash messages für mailer-->
+    
+    <div class="row">
+      <% if alert %>
+        <p class="alert alert-notice" role="alert"><%= alert %></p>
+      <% end %>
+
+      <% if notice %>
+        <p  id="notice" class="alert alert-info" role="alert"><%= notice %></p>
+      <% end %>
+     </div>
+    
+    <!--div class="page-wrapper">
+      <%= yield %>
+    </div-->
+
+   <!--p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p-->
+>>>>>>> 48c13c8... added authorization according to 5.5.
 
     <!--navbar starts here-->
     <nav class="navbar navbar-default navbar-fixed-top">
