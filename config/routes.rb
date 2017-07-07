@@ -16,5 +16,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page'
 
+  #devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
