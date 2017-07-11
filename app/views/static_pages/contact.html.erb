@@ -7,17 +7,16 @@
   </h2>
 
 
-<h1>Or fill in our form</h1>
+<h2>Or fill in our form</h2>
 
-<div class="container contact-form color: #3234cd border-color: #3234cd">
+<div class="container contact-form">
 <%= flash[:notice] %>
 
 <%= form_with(url: "/static_pages/thank_you") do |form| %>
   <div class="row" style="width: 100%">
     <div class="col-md-12">
-    <div class="form-group">
 
-
+    <div class="form-group" id="contact_form">
       <%= text_field_tag :name, nil, class: "form-control", placeholder: "Please enter your Name", :required => true %>
       </div>      
       <div class="form-group">
