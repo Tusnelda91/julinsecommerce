@@ -34,9 +34,13 @@ body {
 	padding-top: 0.2em;
 }
 
-.btn-default {
+.btn-primary, a {
 	color: #28c093; 
 	background-color: #3234cd;
+	}
+
+a:hover, btn:hover, .send-button {
+	color: #yellow;
 }
 
 /***carousel***/
@@ -60,14 +64,19 @@ h1 {
 	background-color: #3234cd;
 }
 
-h2, p, h1 {
+h2, p, h1, h3, a {
 	font-family: Acme,Arial,Georgia,serif;
 	text-align: center;
 	}
 
-h2, p {
+h2, p, h3 {
 	color: #3234cd;
 	background-color: #28c093;
+}
+
+a {
+	color: #28c093;
+	background-color: #3234cd;
 }
 
 .img-responsive {
@@ -83,9 +92,11 @@ body > .container {
 }
 
 
+
 /***footer***/
 footer {
 	padding-top: 1em;
 	font-family: Acme,Arial,Georgia,serif;
 	color: #3234cd;
+	
 }

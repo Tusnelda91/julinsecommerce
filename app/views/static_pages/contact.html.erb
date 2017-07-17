@@ -1,8 +1,10 @@
 <h1>How to get in touch</h1>
-  <h2>Please contact me
-   <li>by email: julin@contact.info</li>
-   <li>or phone: +49 551 912799</li>
-  </h2>
+  <h2>Please contact me</h2>
+   <ul>
+     <h2><li>by email: julin@contact.info</li>
+     <li>or phone: +49 551 912799</li>
+     </h2> 
+   </ul>
 
 
 <h1>Or fill in our form</h1>
@@ -10,7 +12,8 @@
 <div class="container contact-form">
 <%= flash[:notice] %>
 
-<%= form_with(url: "/static_pages/thank_you") do |form| %>
+<!--%= form_with(url: "/static_pages/thank_you") do |form| %-->
+<%= form_with(url: "/static_pages/thank_you", local: true) do |form| %> 
   <div class="row" style="width: 90%">
     <div class="col-md-12">
     <div class="form-group">

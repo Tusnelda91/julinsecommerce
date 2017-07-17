@@ -2,18 +2,16 @@
 
       <div class="col-sm-2 col-md-3">
       <%= image_tag(product.image_url, class: "img-responsive") %>
-
-       <!--%= link_to "Show Product", product %-->
-      <%= button_to "Show Package", product, :method => "get" %>
       
 <!-- generates the HTML tag: -->
 <!--a href=”/products/3>Show Product</a-->
 
-        <a href="#"><h1> <%= product.name %> </h1></a>
+        <h3> <%= product.name %> </h3>
         
 
         <p><%= product.description %></p>
         <p> <%= product.more_about %> </p>
+        <p> <%= link_to "Show Package", product %> <p><br>
         <p>€ <%= product.price %></p>
         
         
