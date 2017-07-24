@@ -11,11 +11,13 @@
 
         <p><%= product.description %></p>
         <p> <%= product.more_about %> </p>
-        <p> <%= link_to "Show Package", product %> <p><br>
+        <p> <%= link_to "Show Package", product %> <p>
+        <p><%= link_to 'Edit', edit_product_path(product), class: 'btn btn-primary', style: 'color:#28c093' %></p>
+        <br>
         <p>€ <%= product.price %></p>
         
         
        
       </div><!-- /col -->
-      <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-primary', style: 'color:#28c093' %>
+
     
