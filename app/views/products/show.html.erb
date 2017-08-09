@@ -30,6 +30,12 @@
   </h3>
 </div>
 
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+
+
+
 <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary', style: 'color:#28c093' %> |
 <%= link_to 'Back', products_path, class: 'btn btn-primary', style: 'color:#28c093' %>
 
+<%= render 'new_comment' %>
+<%= render 'comments' %>
