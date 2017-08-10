@@ -21,8 +21,12 @@ def show
   @comments = @product.comments.order("created_at DESC")
 end
 
-  def destroy 
-  end
+def destroy
+  @comment = Comment.find(params[:id])
+  product = @comment.product
+  @comment.destroy
+  redirect_to product
+end
 
 end
 
