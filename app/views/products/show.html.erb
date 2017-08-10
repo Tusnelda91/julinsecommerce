@@ -39,3 +39,11 @@
 
 <%= render 'new_comment' %>
 <%= render 'comments' %>
+
+<!--%= will_paginate @comments %-->
+<div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @posts %>
+    </div>
+    <%= will_paginate @comments, :container => false %>
+  </div>

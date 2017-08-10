@@ -37,7 +37,7 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
+gem 'will_paginate', '~> 3.1.1'
 
 group :production do
 	gem 'pg'
