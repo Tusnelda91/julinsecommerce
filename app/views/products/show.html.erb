@@ -1,34 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<h1>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</h1>
 
-<h2>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</h2>
+<div class="product-show">
+  <h1>
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </h1>
 
-<p>
-  <strong>Image:</strong>
-  <%= @product.image_url %>
-  <!--%= image_tag(product.image_url, class: "img-responsive") %-->
-</p>
+  <h3>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </h3>
+
+<!--%= image_tag(product.image_url, class: "img-responsive") %-->
+
+  <%= image_tag(@product.image_url, width: "550",class: "thumbnail img-zoom", data_zoom_image: @product.image_url) %>
+
+  <p>
+    <%= @product.image_url %>
+  </p>
+
+  <h3>
+    <%= @product.more_about %>
+  </h3>
+
+  <h3>
+    <strong> Price:</strong>
+    <%= @product.price %>
+  </h3>
+</div>
+
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
 
 
-<h2>
-  <%= @product.more_about %>
-</h2>
+<%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary', style: 'color:#28c093' %> |
+<%= link_to 'Back', products_path, class: 'btn btn-primary', style: 'color:#28c093' %>
 
-<h2>
-  <strong> Price:</strong>
-  <%= @product.price %>
-</h2>
+<%= render 'new_comment' %>
+<%= render 'comments' %>
 
-<%= @product.highest_rating_comment %>
-<!--p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></p-->
+<!--%= will_paginate @comments %-->
+<div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @posts %>
+    </div>
+    <%= will_paginate @comments, :container => false %>
+  </div>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>

@@ -1,10 +1,12 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /products
   # GET /products.json
   
   def index
+    #@products = Product.all.paginate(page: params[:page], per_page: 3)
     if params[:q]
        search_term = params[:q] # returns the filtered list here
        @products = Product.search(search_term)
@@ -16,6 +18,10 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @comments = @product.comments.order("created_at DESC")
+    @comments = @product.comments.paginate(:page => params[:page], :per_page => 3)
+
+    logger.debug "Comments: #{@comments}"
   end
 
   # GET /products/new
@@ -78,5 +84,6 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :more_about, :price)
     end
+
 end
 
