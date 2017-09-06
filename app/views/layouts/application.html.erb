@@ -69,7 +69,7 @@
                <%= label_tag(:q, "Search for:", class:"hidden") %>
                <%= text_field_tag(:q, "", type:"text", class:"form-control", placeholder:"Search") %>
                </div>
-               <%= submit_tag("Search", class:"btn btn-primary") %>
+               <%= submit_tag("Search", class: 'btn btn-primary', style: 'font-family: Acme,Arial,Georgia,serif; font-size: 1.3em; letter-spacing:0.05em') %>
                <% end %>      
 
             </li>
@@ -78,9 +78,9 @@
           <ul class="nav pull-right">
             <li>
                 <% if user_signed_in? %>
-                  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                  <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-primary') %>
                 <% else %>
-                  <%= link_to('Login', new_user_session_path) %>
+                  <%= link_to('Login', new_user_session_path, class: 'btn btn-primary', style: 'color:#28c093; font-size: 1.5em; letter-spacing: 0.05em') %>
                 <% end %>
             </li>
           </ul>

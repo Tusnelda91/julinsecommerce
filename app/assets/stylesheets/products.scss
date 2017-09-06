@@ -106,15 +106,16 @@
 }
 
 .pagination {
-  .previous_page { background:#7777ff; color:white }
-  .previous_page.disabled { background: white; color: #777 }
+  .previous_page { font-family: Acme,Arial,Georgia,serif }
+  .previous_page.disabled { color: #3234cd; font-family: Acme,Arial,Georgia,serif}
   .current { background: yellow }
-  .next_page { background: #7777ff; color: white }
-  .next_page.disabled { background: white; color: #777 }
+  .next_page { font-family: Acme,Arial,Georgia,serif }
+  .next_page.disabled { color: #3234cd; font-family: Acme,Arial,Georgia,serif }
 }
 
 .btn btn-primary  {
 	color: #28c093;
   background-color: #3234cd;
 }
+
 }

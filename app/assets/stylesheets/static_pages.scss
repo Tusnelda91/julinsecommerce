@@ -34,13 +34,27 @@ body {
 	padding-top: 0.2em;
 }
 
+.pull-right {
+	color:#28c093; 
+	font-size: 1em; 
+	letter-spacing: 0.05em;
+	padding-top: 0.2em;
+	padding-right: 9em;
+}
+
 .btn-primary, a {
 	color: #28c093; 
 	background-color: #3234cd;
 	}
 
 a:hover, btn:hover, .send-button {
-	color: #yellow;
+	color: yellow;
+}
+
+
+.actions {
+	color: #28c093;
+	font-family: Acme,Arial,Georgia,serif;
 }
 
 /***carousel***/
