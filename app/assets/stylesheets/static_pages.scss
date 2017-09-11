@@ -84,7 +84,7 @@ h2, p, h1, h3, a {
 	}
 
 h2, p, h3 {
-	color: #3234cd;
+   	color: #3234cd;
 	background-color: #28c093;
 }
 
@@ -99,11 +99,33 @@ h2, p, h3 {
 	border: #3234cd 1em;
 	}
 
+
 body > .container {
   padding: 60px 15px 0;
 }
 
+/***about***/
+
+.parallax hoian {
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/hoianboys.jpg");
+  background-attachment: fixed;
+ padding-bottom: 100px;
+  padding-top: 30px;
+  height: 700px;
+  }
+
+  @media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
 /***contact***/
+
 #contact_form {
 	border-color: #3234cd;
 	}
@@ -128,3 +150,5 @@ footer {
 	color: #3234cd;
 	
 }
+
+

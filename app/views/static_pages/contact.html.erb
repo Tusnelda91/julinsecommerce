@@ -1,3 +1,5 @@
+<div class="container contact-form color: #3234cd border-color: #3234cd">
+
 <h1>How to get in touch</h1>
 
   <h2>Please contact me
@@ -10,10 +12,10 @@
 
 
 
-<h1>Or fill in our form</h1>
+<h1>Or fill in our form: </h1>
 
 
-<div class="container contact-form color: #3234cd border-color: #3234cd">
+
 <%= flash[:notice] %>
 
 <!--%= form_with(url: "/static_pages/thank_you") do |form| %-->
@@ -24,13 +26,13 @@
     <div class="col-md-12">
 
     <div class="form-group" id="contact_form">
-      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Please enter your Name", :required => true %>
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Please enter your Name", border: 2, :required => true %>
       </div>      
       <div class="form-group">
-        <%= email_field_tag :email, nil, class: "form-control", placeholder: "Please enter your Email", :required => true %>
+        <%= email_field_tag :email, nil, class: "form-control", placeholder: "Please enter your Email", border: 2, :required => true %>
       </div>
       <div class="form-group">
-        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Please enter your Message", :required => true %>
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Please enter your Message", border: 2, :required => true %>
       </div>      
   <%= submit_tag "Send", class: "btn btn-primary send-button" %>   
   <% end %>

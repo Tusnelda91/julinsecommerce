@@ -12,15 +12,17 @@
 		</div>
 </div>
 
-<div class="container-fluid" id="products">
- <%= will_paginate @products %>
- <!--%= will_paginate @comments %-->
+
   <div class="row" id="angebote">
    
   <%= render @products %>
 
 
   </div>
+
+  <div class="pagination pagination-centered">
+ <%= will_paginate @products %>
+ <!--%= will_paginate @comments %-->
   
 </div>
 
