@@ -19,6 +19,10 @@ body {
 	height: 6em;
 }
 
+.navbar-right li {
+	padding-right: 1em;
+}
+
 #mynavbar a {
 	color: #3234cd;
 	background-color: #28c093;
@@ -38,8 +42,8 @@ body {
 	color:#28c093; 
 	font-size: 1em; 
 	letter-spacing: 0.05em;
+	padding-left: 1em;
 	padding-top: 0.2em;
-	padding-right: 9em;
 }
 
 .btn-primary, a {
@@ -136,11 +140,11 @@ body > .container {
 	background-color: #3234cd;
 	}
 
+
+
 .btn a:hover {
-		color: #ff0;
-	}
-
-
+	color: yellow;
+}
 
 
 /***footer***/
@@ -151,4 +155,8 @@ footer {
 	
 }
 
+/***pagination***/
 
+.page_info {
+	align: center;
+}
