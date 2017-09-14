@@ -40,21 +40,20 @@ body {
 
 .pull-right {
 	color:#28c093; 
-	font-size: 1em; 
 	letter-spacing: 0.05em;
-	padding-left: 1em;
+	margin-left: auto;
+	margin-right: auto;
 	padding-top: 0.2em;
 }
 
-.btn-primary, a {
+.btn-primary, a, #login {
 	color: #28c093; 
 	background-color: #3234cd;
-	}
-
-a:hover, btn:hover, .send-button {
-	color: yellow;
 }
 
+a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-button:hover {
+	color: yellow;
+}
 
 .actions {
 	color: #28c093;
@@ -92,9 +91,6 @@ h2, p, h3 {
 	background-color: #28c093;
 }
 
-
-
-
 .img-responsive {
 	display: inline-block;
 	float: center;
@@ -103,6 +99,13 @@ h2, p, h3 {
 	border: #3234cd 1em;
 	}
 
+/***photos of products on show***/
+.img-zoom {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 
 body > .container {
   padding: 60px 15px 0;
@@ -110,16 +113,16 @@ body > .container {
 
 /***about***/
 
-.parallax hoian {
+.parallax {
   width: 100%;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../images/hoianboys.jpg");
   background-attachment: fixed;
- padding-bottom: 100px;
+  padding-bottom: 350px;
   padding-top: 30px;
-  height: 700px;
+  height: 400px;
   }
 
   @media only screen and (max-device-width: 1024px) {
@@ -157,6 +160,22 @@ footer {
 
 /***pagination***/
 
-.page_info {
+.digg_pagination {
+    font-family: Acme,Arial,Georgia,serif;
+    font-size: 1em;
+    text-decoration: none;
+	text-align: center;
+	.previous_page { background: white; color: #777 }
+    .previous_page.disabled { background: white; color: black }
+    .current { background: #777 }
+    .next_page { background: white; color: #777 }
+    .next_page.disabled { background: white; color: black }
+}
+
+/***rating stars***/
+
+#stars {
+	margin-left: auto;
+	margin-right: auto;
 	align: center;
 }
