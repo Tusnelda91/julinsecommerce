@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'payments/create'
+
   devise_for :users
   resources :users
   resources :products do
@@ -11,6 +13,10 @@ Rails.application.routes.draw do
   post 'static_pages/thank_you'
 
   get 'static_pages/index'
+
+  post 'payments/create'
+  get 'payments/create'
+    #mount ActionCable.server => '/cable'
  
  
   root 'static_pages#landing_page'
