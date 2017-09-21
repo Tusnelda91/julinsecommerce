@@ -6,12 +6,16 @@ class ProductsController < ApplicationController
   # GET /products.json
   
   def index
+    #byebug
     #@products = Product.all.paginate(page: params[:page], per_page: 3)
     if params[:q]
        search_term = params[:q] # returns the filtered list here
        @products = Product.search(search_term)
+       #logger.debug "Search Results: #{@products.length}"
     else
        @products = Product.all
+       #@products = Product.where('category is not null').group_by(&:category)
+       #logger.debug "Product: #{@products}"
     end
     
        @products = @products.paginate(:page => params[:page], :per_page => 4 )
@@ -23,7 +27,7 @@ class ProductsController < ApplicationController
     @comments = @product.comments.order("created_at DESC")
     @comments = @product.comments.paginate(:page => params[:page], :per_page => 3)
 
-    logger.debug "Comments: #{@comments}"
+    #logger.debug "Comments: #{@comments}"
   end
 
   # GET /products/new
