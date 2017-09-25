@@ -70,4 +70,4 @@ gem 'rails-controller-testing'
 
 gem 'stripe'
 
-
+gem "brakeman", :require => false

@@ -12,9 +12,8 @@
     <%= @product.description %>
   </h3>
 
-<!--%= image_tag(product.image_url, class: "img-responsive") %-->
+<%= image_tag(@product.image_url,class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
 
-  <%= image_tag(@product.image_url, width: "550",class: "thumbnail img-zoom", data_zoom_image: @product.image_url) %>
 
   <p>
     <%= @product.image_url %>
