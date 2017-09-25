@@ -29,7 +29,7 @@
   </h3>
 </div>
 
-<p>Average Rating: <div class="rated" id="stars" data-score="<%= @product.average_rating %>"></div> </p>
+<p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
 
  <%= form_tag "/payments/create" do %>
         <%= hidden_field_tag(:product_id, @product.id) %>
