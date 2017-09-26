@@ -16,7 +16,8 @@ Rails.application.routes.draw do
 
   post 'payments/create'
   get 'payments/create'
-    #mount ActionCable.server => '/cable'
+  
+  mount ActionCable.server => '/cable'
  
  
   root 'static_pages#landing_page'
