@@ -2,6 +2,7 @@
 
 
 <div class="product-show">
+<div class="row" data-product-id="<%= @product.id %>" >
   <h1>
     <strong>Name:</strong>
     <%= @product.name %>
@@ -27,6 +28,7 @@
     <strong> Price:</strong>
     <%= @product.price %>
   </h3>
+  </div>
 </div>
 
 <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>

@@ -1,11 +1,14 @@
 class ProductChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "product_channel"
+    #stream_from "product_channel"
   end
 
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
   end
-  ActionCable.server.broadcast 'product_channel', comment: "Hello World", average_rating: 5
-#oder n anderes file?
+
+  def listen(data)
+  	stop_all_streams
+  	stream_for data["product_id"]
+  end
 end
