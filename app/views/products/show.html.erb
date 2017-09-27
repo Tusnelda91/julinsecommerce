@@ -76,5 +76,12 @@
       <%= page_entries_info @comments %>
     </div>
   <%= will_paginate @comments %>
+
+   <h6 class="viewed"> Views:
+        <span class="badge">
+          <%= @product.views%>
+        </span>
+   </h6>
+
 </div>
 
