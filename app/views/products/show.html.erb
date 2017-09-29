@@ -4,16 +4,14 @@
 <div class="product-show">
 <div class="row" data-product-id="<%= @product.id %>" >
   <h1>
-    <strong>Name:</strong>
     <%= @product.name %>
   </h1>
 
-  <h3>
-    <strong>Description:</strong>
+  <h2>
     <%= @product.description %>
-  </h3>
+  </h2>
 
-<%= image_tag(@product.image_url,class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
+<%= image_tag( @product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
 
 
   <p>
@@ -21,27 +19,42 @@
   </p>
 
   <h3>
-    <%= @product.more_about %>
+    <strong><%= @product.more_about %></strong>
   </h3>
 
   <h3>
-    <strong> Price:</strong>
+     Price:
     <%= @product.price %>
   </h3>
+
+   <%= form_tag '/payments/create' do %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+        <%= render partial: 'shared/stripe_checkout_button', class: 'btn btn-primary', id: 'pay' %>
+        <script type='text/javascript'>
+    $(document).ready(function(){
+        $('.stripe-button-el span').remove();
+            $('button.stripe-button-el').removeAttr('style').css({
+                'display': 'block',
+                'margin': '0 auto',
+                'width':'15%',
+                'padding':'0.5em',
+                'background':'#3234cd',
+                'color':'#28c093',
+                'font-size':'1e' }).html('Pay with card');
+        });
+         </script>
+   <% end %>
   </div>
 </div>
 
-<p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
+<p> <h4>Average Rating: </h4> </p> <div class='rated' id='average-rating' data-score='<%= @product.average_rating %>'></div>  
 
- <%= form_tag "/payments/create" do %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
-        <%= render partial: 'shared/stripe_checkout_button' %>
-<% end %>
+
 
 
 
 <% if signed_in? %>
-              <h4>Add a review:</h4>
+              <h3>Add a review:</h3>
               <%= form_for([@product, @product.comments.build]) do |f| %>
                   <p>
                     <%= f.label :body, "Comments" %><br>
@@ -77,11 +90,11 @@
     </div>
   <%= will_paginate @comments %>
 
-   <h6 class="viewed"> Views:
+   <!--h6 class="viewed"> Views:
         <span class="badge">
-          <%= @product.views%>
+          <#%= @product.views%>
         </span>
-   </h6>
+   </h6-->
 
 </div>
 

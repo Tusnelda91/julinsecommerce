@@ -13,6 +13,8 @@
     align-items: center;
     justify-content: center;
     color: #3234cd;
+    font-size: 1.4em;
+	text-align: center;
 }
 
 
@@ -23,12 +25,22 @@
 	color: #3234cd;
 }
 
+.stripe-button-el {
+  display: btn btn-primary;
+  color: #28c093;
+  background-color: #3234cd;
+  align-button: center;
+}
+
 .field {
 	height: 2em;
 }
 
+#average-rating {
+	margin: 0 auto;
+}
 
-#products h3 {
+#products h3 h4 {
     background-color: #3234cd;
 	color: #28c093;
 	padding: 0.5em;
@@ -47,16 +59,11 @@
 #products a {
 	color: #28c093;
 	background-color: #3234cd;
-
-
 	text-align: center;
 	font-size: 0.8em;
 }
 
-#products p {
-	font-size: 1.4em;
-	text-align: center;
-}
+
 
 #products.image_url {
 	align: center;
@@ -143,7 +150,7 @@
 
 
 .btn btn-primary  {
-	color: #28c093;
+  color: #28c093;
   background-color: #3234cd;
 }
 

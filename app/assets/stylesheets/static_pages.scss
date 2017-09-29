@@ -88,8 +88,9 @@ h2, p, h1, h3, a {
 
 h2, p, h3 {
    	color: #3234cd;
-	background-color: #28c093;
+	//background-color: #28c093;
 }
+
 
 .img-responsive {
 	display: inline-block;
@@ -113,6 +114,10 @@ body > .container {
 
 /***about***/
 
+#hoian {
+   	opacity: 0.6;
+}
+
 .parallax {
   width: 100%;
   margin: 0 auto;
@@ -124,12 +129,12 @@ body > .container {
   padding-top: 30px;
   height: 400px;
   }
-
   @media only screen and (max-device-width: 1024px) {
     .parallax {
         background-attachment: scroll;
     }
 }
+
 
 /***contact***/
 
@@ -155,7 +160,7 @@ footer {
 	padding-top: 1em;
 	font-family: Acme,Arial,Georgia,serif;
 	color: #3234cd;
-	
+
 }
 
 /***pagination***/

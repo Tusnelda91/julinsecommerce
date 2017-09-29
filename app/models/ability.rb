@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 class Ability
   include CanCan::Ability
 
