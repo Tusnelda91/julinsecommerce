@@ -11,7 +11,7 @@
     <%= @product.description %>
   </h2>
 
-<%= image_tag( @product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
+<%= image_tag( @product.image_url, class: "img-responsive img-zoom1", data_zoom_image: "@product.image_url") %>
 
 
   <p>
@@ -21,6 +21,8 @@
   <h3>
     <strong><%= @product.more_about %></strong>
   </h3>
+
+  <p> <h4>Average Rating: </h4> </p> <div class='rated' id='average-rating' data-score='<%= @product.average_rating %>'></div>  
 
   <h3>
      Price:
@@ -40,17 +42,12 @@
                 'padding':'0.5em',
                 'background':'#3234cd',
                 'color':'#28c093',
-                'font-size':'1e' }).html('Pay with card');
+                'font-size':'1e' }).html('Pay here');
         });
          </script>
    <% end %>
   </div>
 </div>
-
-<p> <h4>Average Rating: </h4> </p> <div class='rated' id='average-rating' data-score='<%= @product.average_rating %>'></div>  
-
-
-
 
 
 <% if signed_in? %>

@@ -46,7 +46,7 @@ body {
 	padding-top: 0.2em;
 }
 
-.btn-primary, a, #login {
+.btn-primary, a, #login, #edit, #back {
 	color: #28c093; 
 	background-color: #3234cd;
 }
@@ -66,6 +66,7 @@ a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-butto
 	color: #28c093;
 	font-size: 3em;
 	padding: 3em;
+	margin: 0 auto;
 }
 
 .carousel-indicators .active {
@@ -114,9 +115,6 @@ body > .container {
 
 /***about***/
 
-#hoian {
-   	opacity: 0.6;
-}
 
 .parallax {
   width: 100%;
@@ -124,10 +122,9 @@ body > .container {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../images/hoianboys.jpg");
-  background-attachment: fixed;
-  padding-bottom: 350px;
-  padding-top: 30px;
-  height: 400px;
+  padding: 0.05em;
+  height: 20em;
+  opacity: 0.4;
   }
   @media only screen and (max-device-width: 1024px) {
     .parallax {
@@ -135,47 +132,76 @@ body > .container {
     }
 }
 
+.parallax #hoian h1 {
+  opacity: 0;
+  width: 70%;
+}
 
-/***contact***/
 
-#contact_form {
-	border-color: #3234cd;
-	}
+
+
 
 /***buttons***/
-.btn {
+.btn btn-primary {
 	color: #28c093;
 	background-color: #3234cd;
 	}
 
 
-
-.btn a:hover {
+.btn btn-primary a:hover {
 	color: yellow;
 }
 
 
 /***footer***/
-footer {
+.footer {
+    padding-bottom: 0.1em; 
 	padding-top: 1em;
 	font-family: Acme,Arial,Georgia,serif;
 	color: #3234cd;
 
 }
 
-/***pagination***/
+//pagination
 
-.digg_pagination {
-    font-family: Acme,Arial,Georgia,serif;
-    font-size: 1em;
-    text-decoration: none;
+.pagination {
+	border: none;
 	text-align: center;
-	.previous_page { background: white; color: #777 }
-    .previous_page.disabled { background: white; color: black }
-    .current { background: #777 }
-    .next_page { background: white; color: #777 }
-    .next_page.disabled { background: white; color: black }
+	padding: 1.3em;
+	cursor: default;
+	
 }
+
+.pagination a:hover, .pagination a:focus {
+  text-decoration: underline; 
+  text-color: yellow;
+  color: yellow;
+}
+.pagination a, .pagination span {
+	padding: 0.2em 0.3em; 
+
+.pagination .disabled {
+	color: white; 
+}
+.pagination .current {
+	font-style: normal;
+	font-weight: bold;
+	background-color: #b75f5f;
+	display: inline-block;
+	width: 1.4em;
+	height: 1.4em;
+	line-height: 1.5;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+	.pagination a {
+	text-decoration: none;
+	color: white; 
+}
+}
+
+
 
 /***rating stars***/
 

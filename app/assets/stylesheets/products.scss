@@ -2,6 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.row {
+  width: 60%;
+  margin: 1em auto;
+  color: #3234cd;
+}
+
+
+.product-show {
+  max-width: 90%;
+  text-align: center;
+  color: #28c093;
+  margin-left: 9em;
+}
+
+//in the index part
+#angebote {
+  width: 100%;
+  margin: 1em auto;
+  padding-top: 0.5em;
+  color: #3234cd;
+}
+
+
+
+
 #products {
 	background-color: #28c093;
 	align-items: center;
@@ -18,11 +43,16 @@
 }
 
 
+/***buttons***/
+.btn btn-primary {
+	color: #28c093;
+	background-color: #3234cd;
+	}
 
-#button {
-    align: center;
-	background-color: #28c093;
-	color: #3234cd;
+
+
+.btn btn-primary a:hover {
+	color: yellow;
 }
 
 .stripe-button-el {
@@ -88,70 +118,32 @@
 	color: #28c093;
 }
 
-.row {
-  width: 70%;
-  margin: 1em auto;
-  padding-top: 0.5em;
-  color: #3234cd;
-}
 
-
-.product-show {
-  max-width: 70%;
-  text-align: center;
-  color: #28c093;
-  background-color: #3234cd;
-  margin-left: 9em;
-}
 
 .product-show img {
-  display: block;
-  margin-left: auto;
+  display: inline-block;
   margin-right: auto;
+  margin-left: auto;
   border-color: #28c093;
   border-width: 0.5em;
 }
 
-//pagination
+/***pagination***/
 
-.pagination {
-	background: black;
-	border: none;
+.digg_pagination {
+    font-family: Acme,Arial,Georgia,serif;
+    font-size: 1em;
+    text-decoration: none;
 	text-align: center;
-	padding: 1em;
-	cursor: default; 
-}
-.pagination a, .pagination span {
-	padding: 0.2em 0.3em; 
-
-.pagination .disabled {
-	color: white; 
-}
-.pagination .current {
-	font-style: normal;
-	font-weight: bold;
-	background-color: #b75f5f;
-	display: inline-block;
-	width: 1.4em;
-	height: 1.4em;
-	line-height: 1.5;
-	-moz-border-radius: 1em;
-	-webkit-border-radius: 1em;
-	border-radius: 1em;
-	text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
-	.pagination a {
-	text-decoration: none;
-	color: white; 
-}
-.pagination a:hover, .pagination a:focus {
-  text-decoration: underline; 
-}
-}
-
-
-.btn btn-primary  {
-  color: #28c093;
-  background-color: #3234cd;
+	margin: 0 auto;
+	.previous_page { background: white; color: #777 }
+    .previous_page.disabled { background: white; color: black }
+    .current { background: #777 }
+    .next_page { background: white; color: #777 }
+    .next_page.disabled { background: white; color: black }
 }
 
 }
+
+
+
