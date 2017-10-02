@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 
@@ -26,7 +27,7 @@
 
   <h3>
      Price:
-    <%= @product.price %>
+    <%= @product.price %> <small><span class="glyphicon glyphicon-euro fa-sm"></span></small>
   </h3>
 
    <%= form_tag '/payments/create' do %>
@@ -46,11 +47,10 @@
         });
          </script>
    <% end %>
-  </div>
-</div>
+  
 
 
-<% if signed_in? %>
+  <% if signed_in? %>
               <h3>Add a review:</h3>
               <%= form_for([@product, @product.comments.build]) do |f| %>
                   <p>
@@ -66,22 +66,24 @@
                     <%= f.submit "Submit" %>
                   </p>
               <% end %>
-<% end %>
+  <% end %>
 
-<% if @product.highest_rating_comment %>
+  <% if @product.highest_rating_comment %>
   <p><%= @product.highest_rating_comment.body %></p>
-<% end %>
+  <% end %>
 
-<%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary', id: 'edit', style: 'color:#28c093' %> |
-<%= link_to 'Back', products_path, class: 'btn btn-primary', id: 'back', style: 'color:#28c093' %>
+  <br>
+  <p>
+  <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary', id: 'edit', style: 'color:#28c093' %> |
+  <%= link_to 'Back', products_path, class: 'btn btn-primary', id: 'back', style: 'color:#28c093' %> </p>
 
-<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 
-<%= render 'new_comment' %>
-<%= render 'comments' %>
+  <%= render 'new_comment' %>
+  <%= render 'comments' %>
 
 <!--%= will_paginate @comments %-->
-<div class="digg_pagination">
+  <div class="digg_pagination">
     <div class="page_info">
       <%= page_entries_info @comments %>
     </div>
@@ -93,5 +95,7 @@
         </span>
    </h6-->
 
+  </div>
+</div>
 </div>
 
