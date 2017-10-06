@@ -8,10 +8,8 @@
   data-image="<%= image_path(@product.image_url) %>"
   data-locale="auto"
   data-currency="eur"
-  <% if (current_user != nil)%>
   data-email = "<%= current_user.email %>"
-  <%end%>
->
+  >
 </script>
 <% else %>
   <%= link_to "<button class=\"stripe-button-el\"><span style=\"display: block; min-height: 30px;\">Pay with Card</span></button>".html_safe, new_user_session_path %>

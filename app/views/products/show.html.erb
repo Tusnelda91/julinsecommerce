@@ -3,32 +3,32 @@
 
 
 <div class="product-show">
-<div class="row" data-product-id="<%= @product.id %>" >
-  <h1>
-    <%= @product.name %>
-  </h1>
+  <div class="row" data-product-id="<%= @product.id %>" >
+    <h1>
+      <%= @product.name %>
+    </h1>
 
-  <h2>
-    <%= @product.description %>
-  </h2>
+    <h2>
+      <%= @product.description %>
+    </h2>
 
-<%= image_tag( @product.image_url, class: "img-responsive img-zoom1", data_zoom_image: "@product.image_url") %>
+    <%= image_tag( @product.image_url, class: "img-responsive img-zoom1", data_zoom_image: "@product.image_url") %>
 
 
-  <p>
-    <%= @product.image_url %>
-  </p>
+    <p>
+      <%= @product.image_url %>
+    </p>
 
-  <h3>
-    <strong><%= @product.more_about %></strong>
-  </h3>
+    <h3>
+      <strong><%= @product.more_about %></strong>
+    </h3>
 
-  <p> <h4>Average Rating: </h4> </p> <div class='rated' id='average-rating' data-score='<%= @product.average_rating %>'></div>  
+    <p> <h4>Average Rating: </h4> </p> <div class='rated' id='average-rating' data-score='<%= @product.average_rating %>'></div>  
 
-  <h3>
-     Price:
-    <%= @product.price %> <small><span class="glyphicon glyphicon-euro fa-sm"></span></small>
-  </h3>
+    <h3>
+       Price:
+      <%= @product.price %> <small><span class="glyphicon glyphicon-euro fa-sm"></span></small>
+    </h3>
 
    <%= form_tag '/payments/create' do %>
         <%= hidden_field_tag(:product_id, @product.id) %>
@@ -49,45 +49,28 @@
    <% end %>
   
 
+    <% if @product.highest_rating_comment %>
+    <p><%= @product.highest_rating_comment.body %></p>
+    <% end %>
 
-  <% if signed_in? %>
-              <h3>Add a review:</h3>
-              <%= form_for([@product, @product.comments.build]) do |f| %>
-                  <p>
-                    <%= f.label :body, "Comments" %><br>
-                    <%= f.text_area :body %>
-                  </p>
+    <br>
+    <p>
+    <% if current_user && current_user.admin? %>
+    <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary', id: 'edit', style: 'color:#28c093' %> |
+    <%= link_to 'Back', products_path, class: 'btn btn-primary', id: 'back', style: 'color:#28c093' %> </p>
 
-                  <p>
-                  <div class="rating"></div>
-                  </p>
 
-                  <p>
-                    <%= f.submit "Submit" %>
-                  </p>
-              <% end %>
-  <% end %>
+    <div class="alert alert-info" style="display:none" role="alert">A new comment has been posted!</div>
 
-  <% if @product.highest_rating_comment %>
-  <p><%= @product.highest_rating_comment.body %></p>
-  <% end %>
-
-  <br>
-  <p>
-  <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary', id: 'edit', style: 'color:#28c093' %> |
-  <%= link_to 'Back', products_path, class: 'btn btn-primary', id: 'back', style: 'color:#28c093' %> </p>
-
-  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-
-  <%= render 'new_comment' %>
-  <%= render 'comments' %>
+    <%= render 'new_comment' %>
+    <%= render 'comments' %>
 
 <!--%= will_paginate @comments %-->
-  <div class="digg_pagination">
-    <div class="page_info">
-      <%= page_entries_info @comments %>
-    </div>
-  <%= will_paginate @comments %>
+    <div class="digg_pagination">
+      <div class="page_info">
+        <%= page_entries_info @comments %>
+      </div>
+      <%= will_paginate @comments %>
 
    <!--h6 class="viewed"> Views:
         <span class="badge">
@@ -95,7 +78,7 @@
         </span>
    </h6-->
 
+      <% end %>
+    </div>
   </div>
 </div>
-</div>
-

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'payments/create'
-
+ 
   devise_for :users
   resources :users
   resources :products do
