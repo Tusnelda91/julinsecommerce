@@ -62,17 +62,9 @@
 
     <div class="alert alert-info" style="display:none" role="alert">A new comment has been posted!</div>
 
-<div class="row">
-      <div class="col-sm-offset-2 col-md-offset-2 col-sm-8 col-md-8" id="comments">
-        <%= render'new_comment' %>
-      </div>
-    </div>
-<div class="row">
-      <div class="col-sm-12 col-md-12">
-      <%= render 'comments' %>
-      </div>
-</div>
-    
+    <%= render 'new_comment' %>
+    <%= render 'comments' %>
+
 
 <!--%= will_paginate @comments %-->
     <div class="digg_pagination">
