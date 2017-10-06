@@ -62,15 +62,24 @@
 
     <div class="alert alert-info" style="display:none" role="alert">A new comment has been posted!</div>
 
-    <%= render 'new_comment' %>
-    <%= render 'comments' %>
+<div class="row">
+      <div class="col-sm-offset-2 col-md-offset-2 col-sm-8 col-md-8" id="comments">
+        <%= render'new_comment' %>
+      </div>
+    </div>
+<div class="row">
+      <div class="col-sm-12 col-md-12">
+      <%= render 'comments' %>
+      </div>
+</div>
+    
 
 <!--%= will_paginate @comments %-->
     <div class="digg_pagination">
       <div class="page_info">
         <%= page_entries_info @comments %>
       </div>
-      <%= will_paginate @comments %>
+        <%= will_paginate @comments %>
 
    <!--h6 class="viewed"> Views:
         <span class="badge">
