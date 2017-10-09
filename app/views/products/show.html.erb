@@ -57,7 +57,7 @@
     <p>
      <% if current_user && current_user.admin? %>
      <% end %>
-     
+
     <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary', id: 'edit', style: 'color:#28c093' %> |
     <%= link_to 'Back', products_path, class: 'btn btn-primary', id: 'back', style: 'color:#28c093' %> </p>
 
