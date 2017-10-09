@@ -78,7 +78,8 @@
 }
 
 #products h3 h4 {
-    background-color: #3234cd;
+  font-family: Acme,Arial,Georgia,serif;
+  background-color: #3234cd;
 	color: #28c093;
 	padding: 0.5em;
 	border-width: 0.5em;
@@ -135,13 +136,13 @@
 }
 
 /***new_comments***/
-.Review #AddReview {
-  font-family: Acme,Arial,Georgia,serif; font-size: 2em; letter-spacing:0.05em'
+
+.Review #AddReview h4 {
+  font-family: Acme,Arial,Georgia,serif; font-size: 2em; letter-spacing:0.05em;
 }
 
 .Review #form-control {
   width: 90%;  
-
 }
 
 

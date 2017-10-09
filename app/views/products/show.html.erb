@@ -48,6 +48,12 @@
          </script>
    <% end %>
   
+     <p><h6> Views:
+        <span class="badge">
+          <%= @product.views%>
+        </span>
+     </h6> </p>
+
 
     <% if @product.highest_rating_comment %>
     <p><%= @product.highest_rating_comment.body %></p>
@@ -74,12 +80,6 @@
         <%= page_entries_info @comments %>
       </div>
         <%= will_paginate @comments %>
-
-   <!--h6 class="viewed"> Views:
-        <span class="badge">
-          <#%= @product.views%>
-        </span>
-   </h6-->
 
      
     </div>

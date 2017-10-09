@@ -3,11 +3,11 @@ FactoryGirl.define do
 
   factory :product do
     id
-    name "anything"
-    description "anything"
+    name "testname"
+    description "testoffer"
     image_url "image.jpg"
-    more about "text"
-    price 120
+    more_about "text"
+    price "120"
   end
 
 end
