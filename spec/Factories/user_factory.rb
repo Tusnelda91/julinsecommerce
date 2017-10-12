@@ -3,17 +3,17 @@ FactoryGirl.define do
   
   factory :user do
     email 
+    #id "1"
+    sequence(:id) { |id| id }
     encrypted_password "0987654321"
     first_name "UserA"
     last_name "AUser"
     admin false
   end
 
-  factory :admin, class: User do
-  	email
-  	encrypted_password "thisisadmin"
-  	first_name "Admin"
-  	last_name "User"
-  	admin true
+
+  factory :admin, parent: :user do
+    id
+    admin true
   end
 end

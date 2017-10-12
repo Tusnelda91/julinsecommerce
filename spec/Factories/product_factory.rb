@@ -1,9 +1,10 @@
 FactoryGirl.define do
-  sequence(:id) { |n| "#{n}" }
+  sequence (:product) { |n| "product#{n}" }
 
   factory :product do
-    id
-    name "testname"
+  	#id "1"
+  	sequence(:id) { |id| id }
+  	name "testname"
     description "testoffer"
     image_url "image.jpg"
     more_about "text"
