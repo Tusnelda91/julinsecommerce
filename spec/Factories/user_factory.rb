@@ -5,7 +5,7 @@ FactoryGirl.define do
     email 
     #id "1"
     sequence(:id) { |id| id }
-    encrypted_password "0987654321"
+    password "0987654321" #encrypted_password?
     first_name "UserA"
     last_name "AUser"
     admin false
