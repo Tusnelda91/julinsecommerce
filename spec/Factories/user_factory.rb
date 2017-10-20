@@ -13,7 +13,7 @@ FactoryGirl.define do
 
 
   factory :admin, parent: :user do
-    id
+    #id
     admin true
   end
 end
