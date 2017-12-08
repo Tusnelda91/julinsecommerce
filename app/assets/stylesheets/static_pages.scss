@@ -158,27 +158,36 @@ body > .container {
 	margin-bottom: 5 em;
 }
 
+#aboutpage h1, p {
+	padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+#aboutpage h3 {
+	text-align: center;
+    padding-left: 18em;
+    padding-right: 18em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
 .parallax {
-  width: 100%;
-  margin: 0 auto;
+  width: 90%;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../images/hoianboys.jpg");
+  opacity: 0.4;
   padding: 0.05em;
   height: 20em;
-  opacity: 0.4;
   }
   @media only screen and (max-device-width: 1024px) {
-    .parallax {
-        background-attachment: scroll;
-    }
+  
 }
 
 .parallax #hoian h1 {
-  opacity: 0;
+  position: fixed;
   width: 70%;
 }
-
 
 
 
