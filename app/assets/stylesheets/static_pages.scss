@@ -101,6 +101,15 @@ a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-butto
 }
 
 /***carousel***/
+
+.carousel {
+	margin-top:0em;
+}
+
+#carousel-example-generic {
+	max-height: 42em;
+}
+
 .carousel-caption {
 	font-family: Acme,Arial,Georgia,serif;
 	color: #28c093;
