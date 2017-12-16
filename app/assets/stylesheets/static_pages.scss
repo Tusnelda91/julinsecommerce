@@ -189,11 +189,11 @@ body > .container {
   max-width: 90%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../images/hoianboys.jpg");
+  background-image: image-url("hoianboys.jpg");
   opacity: 0.4;
   padding: 0.05em;
-  height: 20em;
   }
+
   @media only screen and (max-device-width: 1024px) {
   
 }
