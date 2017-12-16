@@ -9,6 +9,7 @@ class Ability
       can [:manage, :destroy], :all
     else
        can :read, :all
+      cannot :manage, Product
     end
   end
 end

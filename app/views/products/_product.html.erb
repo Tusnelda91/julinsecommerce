@@ -3,7 +3,9 @@
       <% cache product do %>
       
       <div class="col-sm-4 col-md-3">
-      <%= image_tag(product.image_url, class: 'img-responsive') %>
+
+
+      <%= image_tag(product.image_url, class: 'img-responsive picturebox') %>
       
 <!-- generates the HTML tag: -->
 <!--a href="/products/3>Show Product</a-->
@@ -12,8 +14,10 @@
   
         <h3> <%= product.name %> </h3>
         
+       <div class="descriptionbox"> 
+         <p><%= product.description %></p>
+       </div>
 
-        <p><%= product.description %></p>
         <p> <%= product.more_about %> </p>
         <p> <%= link_to 'See Details', product, class: 'btn btn-primary', style: 'color:#28c093; font-size: 1.5em' %> <p>
         <p><%= link_to 'Edit', edit_product_path(product), class: 'btn btn-primary', style: 'color:#28c093' %></p>
