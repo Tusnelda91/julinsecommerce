@@ -179,10 +179,14 @@ body > .container {
     padding-right: 18em;
     padding-bottom: 1em;
     padding-top: 1em;
+    letter-space: 0.5em; 
 }
 
+
+
 .parallax {
-  width: 90%;
+  margin: 0 auto;
+  max-width: 90%;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../images/hoianboys.jpg");
