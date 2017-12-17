@@ -111,9 +111,11 @@ a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-butto
 }
 
 .carouselpicture {
-	height: 28em;
+	/***height: 28em;***/
 	width: 130em;
 	object-fit: contain;
+	margin: 0 auto;
+	padding: 0;
 }
 
 .carousel-caption {
