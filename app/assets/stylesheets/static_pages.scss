@@ -111,9 +111,9 @@ a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-butto
 }
 
 .item {
-	max-height: 42em;
-	max-width: 120em;
-	object-fit: contain;
+	max-height: 100em;
+	max-width: 125em;
+	object-fit: cover;
 	margin: 0 auto;
 	padding: 0;
 }
