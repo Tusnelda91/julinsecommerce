@@ -24,9 +24,12 @@
   color: #3234cd;
 }
 
+.img-responsive picturebox {
+  object-fit: contain;
+}
 
 .descriptionbox {
-  height: 5em;
+  height: 8em;
 }
 
 #products {
