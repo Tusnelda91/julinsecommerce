@@ -8,8 +8,7 @@ class Ability
     if user.admin?
       can [:manage, :destroy], :all
     else
-       can :read, :all
-      cannot :manage, Product
+      can :read, :all
     end
   end
 end
