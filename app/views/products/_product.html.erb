@@ -22,7 +22,7 @@
         <p> <%= link_to 'See Details', product, class: 'btn btn-primary', style: 'color:#28c093; font-size: 1.5em' %> <p>
         <p><%= link_to 'Edit', edit_product_path(product), class: 'btn btn-primary', style: 'color:#28c093' %></p>
         <br>
-        <p>€ <%= product.price %></p>
+        <p>€ <%= product.price, number_to_currency(separator: ',') %></p>
         
         <% #logger.debug "Product: #{@product.name}"%>
        
