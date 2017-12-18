@@ -28,7 +28,8 @@
 
     <p></p>
        Price:
-      <%= @product.price %> <small><span class="glyphicon glyphicon-euro fa-sm"></span></small>
+       <p> <%= number_to_currency(@product.price, unit: '€', separator: ',') %> </p>
+      <!--%= @product.price %--> <small><span class="glyphicon glyphicon-euro fa-sm"></span></small>
     </p>
 
    <%= form_tag '/payments/create' do %>
