@@ -107,12 +107,15 @@ a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-butto
 }
 
 #carousel-example-generic {
-	max-height: 42em;
+	max-height: 48em;
+	max-width: 125em;
 }
 
-.item {
-	max-height: 42em;
-	max-width: 125em;
+
+
+.carousel-inner > .item > img {
+  max-width: 125em;
+  max-height: 48em;
 }
 
 .carousel-caption {
