@@ -233,15 +233,22 @@ body > .container {
 //pagination
 
 .pagination {
+	border: none;
+	text-align: center;
+	padding: 1.3em;
+	cursor: default;
+}
+
+.pagination {
     font-family: Acme,Arial,Georgia,serif;
     font-size: 1em;
     text-decoration: none;
 	text-align: center;
 	margin: 0 auto;
-    .previous_page { background: white; color: #777 }
+    .previous_page { background: white; color: #28c093 }
     .previous_page.disabled { background: white; color: black }
-    .current { background: #777 }
-    .next_page { background: white; color: #777 }
+    .current { background: #28c093 }
+    .next_page { background: white; color: #28c093 }
     .next_page.disabled { background: white; color: black }
 }
 
