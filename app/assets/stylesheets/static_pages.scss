@@ -99,10 +99,9 @@ a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-butto
         display:block !important;
     }
 
-    .navbar-form navbar-right {
-      padding-top: 10px;
-      padding-bottom: 10px;
-         
+    .navbar-form navbar-right form-control {
+      max-width: 5em;
+      max-height: 3em;
     }
 }
 
@@ -249,9 +248,6 @@ body > .container {
     text-decoration: none;
 	text-align: center;
 	margin: 0 auto;
-	position: absolute;
-    bottom: 0px;
-    width: 100%;
     .previous_page { background: white; color: #28c093 }
     .previous_page.disabled { background: white; color: black }
     .current { background: #28c093 }
