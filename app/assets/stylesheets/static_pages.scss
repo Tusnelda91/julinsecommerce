@@ -98,14 +98,14 @@ a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-butto
     .collapse.in{
         display:block !important;
     }
+
+    .navbar-form navbar-right {
+      padding-top: 10px;
+      padding-bottom: 10px;
+         
+    }
 }
 
-.form-control, .form-group {
-	width: 70%;
-	margin: 2em;
-	border-color: #3234cd;
-	padding: 1em;
-}
 
 /***carousel***/
 
@@ -246,10 +246,12 @@ body > .container {
     font-family: Acme,Arial,Georgia,serif;
     font-size: 1.5em;
     padding: 1.3em;
-    padding-top: 10em;
     text-decoration: none;
 	text-align: center;
 	margin: 0 auto;
+	position: absolute;
+    bottom: 0px;
+    width: 100%;
     .previous_page { background: white; color: #28c093 }
     .previous_page.disabled { background: white; color: black }
     .current { background: #28c093 }
