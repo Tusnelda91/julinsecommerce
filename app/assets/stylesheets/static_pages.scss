@@ -100,6 +100,13 @@ a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-butto
     }
 }
 
+.form-control, .form-group {
+	width: 70%;
+	margin: 2em;
+	border-color: #3234cd;
+	padding: 1em;
+}
+
 /***carousel***/
 
 .carousel {
@@ -122,6 +129,7 @@ a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-butto
 	font-size: 3em;
 	padding: 3em;
 	margin: 0 auto;
+	height: 100%;
 }
 
 .carousel-indicators .active {
@@ -224,24 +232,19 @@ body > .container {
 /***footer***/
 .footer {
     padding-bottom: 0.1em; 
-	padding-top: 1em;
+	padding-top: em;
 	font-family: Acme,Arial,Georgia,serif;
 	color: #3234cd;
-
+    position: absolute;
 }
 
 //pagination
 
-.pagination {
-	border: none;
-	text-align: center;
-	padding: 1.3em;
-	cursor: default;
-}
 
 .pagination {
     font-family: Acme,Arial,Georgia,serif;
-    font-size: 1em;
+    font-size: 1.5em;
+    padding: 1.3em;
     text-decoration: none;
 	text-align: center;
 	margin: 0 auto;
