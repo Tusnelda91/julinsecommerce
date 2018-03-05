@@ -99,7 +99,9 @@ a:hover, .btn-primary:hover, #login:hover, #edit:hover, #back:hover, .send-butto
         display:block !important;
     }
 
-    .navbar-nav form-control {
+    .navbar-nav>li>form-group {
+      padding-top: 10px;
+      padding-bottom: 10px;
       max-width: 5em;
       max-height: 3em;
       margin: 0 auto;
